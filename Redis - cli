@@ -1,0 +1,119 @@
+127.0.0.1:6379> sadd customer:cstid 100 101 102
+(integer) 3
+127.0.0.1:6379> sadd customer : name sri sandy sound
+(integer) 5
+127.0.0.1:6379> sadd customer : place erode thindal engur
+(integer) 4
+127.0.0.1:6379> sadd order : orderid 201 202 203
+(integer) 5
+127.0.0.1:6379> sadd order : customerid 100 101 102
+(integer) 4
+127.0.0.1:6379> sadd order : quantity 2 1 3
+(integer) 4
+127.0.0.1:6379> sadd menu : menuid 1 2 3
+(integer) 5
+127.0.0.1:6379> sadd menu : foodid san11 veg22 dor33
+(integer) 4
+127.0.0.1:6379> sadd fooditem : foodid san11 veg22 dor33
+(integer) 5
+127.0.0.1:6379> sadd fooditem : itemcategory snacks icecream milkshake
+(integer) 4
+127.0.0.1:6379> sadd fooditem : name sandwich faloda vegroll
+(integer) 4
+127.0.0.1:6379> sadd payment : customerid 100 101 102
+(integer) 5
+127.0.0.1:6379> sadd payment : orderid 201 202 203
+(integer) 4
+127.0.0.1:6379> sadd payment : paymenttype gpay cod paytm
+(integer) 4
+127.0.0.1:6379> sadd administrator : adminid 32 33 43
+(integer) 5
+127.0.0.1:6379> sadd administrator : name gokul mathes kani
+(integer) 4
+127.0.0.1:6379> sadd administrator : username gokul22 mathes33 kani55
+(integer) 4
+127.0.0.1:6379> sadd administrator : password gokul123 mathes@45 kani@56
+(integer) 4
+127.0.0.1:6379> smembers customer
+1) "sri"
+2) "place"
+3) ":"
+4) "erode"
+5) "name"
+6) "sandy"
+7) "thindal"
+8) "sound"
+9) "engur"
+127.0.0.1:6379> smembers order
+ 1) "201"
+ 2) "101"
+ 3) "2"
+ 4) "202"
+ 5) "customerid"
+ 6) "100"
+ 7) "quantity"
+ 8) "orderid"
+ 9) "1"
+10) "3"
+11) "102"
+12) ":"
+13) "203"
+127.0.0.1:6379> smembers fooditem
+ 1) "dor33"
+ 2) "icecream"
+ 3) "itemcategory"
+ 4) "sandwich"
+ 5) "foodid"
+ 6) "vegroll"
+ 7) "veg22"
+ 8) "san11"
+ 9) "faloda"
+10) "snacks"
+11) "milkshake"
+12) ":"
+13) "name"
+127.0.0.1:6379> smembers menu
+1) "3"
+2) "2"
+3) "foodid"
+4) ":"
+5) "veg22"
+6) "san11"
+7) "menuid"
+8) "1"
+9) "dor33"
+127.0.0.1:6379> smembers payment
+ 1) "201"
+ 2) "101"
+ 3) "cod"
+ 4) "202"
+ 5) "paymenttype"
+ 6) "100"
+ 7) "customerid"
+ 8) "orderid"
+ 9) "gpay"
+10) "102"
+11) ":"
+12) "paytm"
+13) "203"
+127.0.0.1:6379> smembers administrator
+ 1) "gokul22"
+ 2) "43"
+ 3) "kani"
+ 4) "32"
+ 5) "mathes"
+ 6) "gokul"
+ 7) "mathes33"
+ 8) "username"
+ 9) "password"
+10) "gokul123"
+11) "kani55"
+12) ":"
+13) "33"
+14) "name"
+15) "mathes@45"
+16) "adminid"
+17) "kani@56"
+127.0.0.1:6379> save
+OK
+127.0.0.1:6379>
